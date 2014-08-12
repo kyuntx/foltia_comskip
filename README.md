@@ -15,7 +15,7 @@ foltia ANIME LOCKER 3.0.6 での動作を確認しています。
 
 ## 使い方
 
-[comskip](http://www.kaashoek.com/comskip/)のバイナリをダウンロードし、解凍したファイル一式を `/home/foltia/perl/tool/comskip/` に配置します。
+- [comskip](http://www.kaashoek.com/comskip/)のバイナリをダウンロードし、解凍したファイル一式を `/home/foltia/perl/tool/comskip/` に配置します。
 
 ```
 [foltia@foltia ~]$ mkdir tmp
@@ -26,28 +26,28 @@ foltia ANIME LOCKER 3.0.6 での動作を確認しています。
 [foltia@foltia tmp]$ mv comskip /home/foltia/perl/tool/
 ```
 
-`/home/foltia/perl/tool/comskip/` に `work` というディレクトリを作成します。
+- `/home/foltia/perl/tool/comskip/` に `work` というディレクトリを作成します。
 
 ```
 [foltia@foltia ~]$ mkdir /home/foltia/perl/tool/comskip/work
 ```
 
-本リポジトリに含まれるファイル一式を適当なディレクトリに置きます。(ここでは `/home/foltia/tmp/`)  
+- 本リポジトリに含まれるファイル一式を適当なディレクトリに置きます。(ここでは `/home/foltia/tmp/`)  
 
-`comskip.ini` ファイルを `/home/foltia/perl/tool/comskip/` に上書きコピーします。
+- `comskip.ini` ファイルを `/home/foltia/perl/tool/comskip/` に上書きコピーします。
 
 ```
 [foltia@foltia tmp]$ cp comskip.ini /home/foltia/perl/tool/comskip/
 ```
 
-`foltia_comskip.sh`, `foltia_comskip_byid_m2t.sh` を `/home/foltia/perl/tool/` におき、で実行権限をつけます。 
+- `foltia_comskip.sh`, `foltia_comskip_byid_m2t.sh` を `/home/foltia/perl/tool/` におき、で実行権限をつけます。 
 
 ```
 [foltia@foltia tmp]$ cp foltia_comskip.sh foltia_comskip_byid_m2t.sh /home/foltia/perl/tool/
 [foltia@foltia tmp]$ chmod 755 /home/foltia/perl/tool/foltia_comskip*.sh
 ```
 
-`ipodtranscode.pl` にパッチを当てます。
+- `ipodtranscode.pl` にパッチを当てます。
 
 ```
 [foltia@foltia ~]$ cd /home/foltia/perl
