@@ -7,13 +7,15 @@ foltia ANIME LOCKER CMスキップ用チャプター追加パッチ
 
 [foltia ANIME LOCKER](http://foltia.com/ANILOC/) で録画した動画に [comskip](http://www.kaashoek.com/comskip/) を使用してCMスキップ用のチャプターをつけるためのパッチとシェルです。
 
+foltia ANIME LOCKER 3.0.6 での動作を確認しています。
+
 個人的に使うために作ったレベルなので完全に無保証です、せっかく録画したファイルが飛んでしまっても後悔しない方のみご使用ください。（一応半年くらい使って飛んだことはありませんが。。。）
 
 [DCC-JPN 宗子時空](http://www.dcc-jpl.com/diary/) さんの [最近のCMカット情勢](http://www.dcc-jpl.com/diary/2014/05/17/foltia-cm-cut2/)に掲載されてる `comskip.ini` を参考にさせていただいてます。
 
 ## 使い方
 
-1. [comskip](http://www.kaashoek.com/comskip/)のバイナリをダウンロードし、解凍したファイル一式を `/home/foltia/perl/tool/comskip/` に配置します。
+[comskip](http://www.kaashoek.com/comskip/)のバイナリをダウンロードし、解凍したファイル一式を `/home/foltia/perl/tool/comskip/` に配置します。
 
 ```
 [foltia@foltia ~]$ mkdir tmp
@@ -24,28 +26,28 @@ foltia ANIME LOCKER CMスキップ用チャプター追加パッチ
 [foltia@foltia tmp]$ mv comskip /home/foltia/perl/tool/
 ```
 
-2. `/home/foltia/perl/tool/comskip/` に `work` というディレクトリを作成します。
+`/home/foltia/perl/tool/comskip/` に `work` というディレクトリを作成します。
 
 ```
 [foltia@foltia ~]$ mkdir /home/foltia/perl/tool/comskip/work
 ```
 
-3. 本リポジトリに含まれるファイル一式を適当なディレクトリに置きます。(ここでは `/home/foltia/tmp/`)  
+本リポジトリに含まれるファイル一式を適当なディレクトリに置きます。(ここでは `/home/foltia/tmp/`)  
 
-4. `comskip.ini` ファイルを `/home/foltia/perl/tool/comskip/` に上書きコピーします。
+`comskip.ini` ファイルを `/home/foltia/perl/tool/comskip/` に上書きコピーします。
 
 ```
 [foltia@foltia tmp]$ cp comskip.ini /home/foltia/perl/tool/comskip/
 ```
 
-5. `foltia_comskip.sh`, `foltia_comskip_byid_m2t.sh` を `/home/foltia/perl/tool/` におき、で実行権限をつけます。 
+`foltia_comskip.sh`, `foltia_comskip_byid_m2t.sh` を `/home/foltia/perl/tool/` におき、で実行権限をつけます。 
 
 ```
 [foltia@foltia tmp]$ cp foltia_comskip.sh foltia_comskip_byid_m2t.sh /home/foltia/perl/tool/
 [foltia@foltia tmp]$ chmod 755 /home/foltia/perl/tool/foltia_comskip*.sh
 ```
 
-6. `ipodtranscode.pl` にパッチを当てます。
+`ipodtranscode.pl` にパッチを当てます。
 
 ```
 [foltia@foltia ~]$ cd /home/foltia/perl
