@@ -9,9 +9,11 @@ foltia ANIME LOCKER CMスキップ用チャプター追加パッチ
 
 個人的に使うために作ったレベルなので完全に無保証です、せっかく録画したファイルが飛んでしまっても後悔しない方のみご使用ください。（一応半年くらい使って飛んだことはありませんが。。。）
 
+[DCC-JPN 宗子時空](http://www.dcc-jpl.com/diary/) さんの [最近のCMカット情勢](http://www.dcc-jpl.com/diary/2014/05/17/foltia-cm-cut2/)に掲載されてる `comskip.ini` を参考にさせていただいてます。
+
 ## 使い方
 
-. [comskip](http://www.kaashoek.com/comskip/)のバイナリをダウンロードし、解凍したファイル一式を `/home/foltia/perl/tool/comskip/` に配置します。
+1. [comskip](http://www.kaashoek.com/comskip/)のバイナリをダウンロードし、解凍したファイル一式を `/home/foltia/perl/tool/comskip/` に配置します。
 
     [foltia@foltia ~]$ mkdir tmp
     [foltia@foltia ~]$ cd tmp/
@@ -20,22 +22,22 @@ foltia ANIME LOCKER CMスキップ用チャプター追加パッチ
     [foltia@foltia tmp]$ unzip comskip81_064.zip -d comskip/
     [foltia@foltia tmp]$ mv comskip /home/foltia/perl/tool/
 
-. `/home/foltia/perl/tool/comskip/` に `work` というディレクトリを作成します。
+2. `/home/foltia/perl/tool/comskip/` に `work` というディレクトリを作成します。
 
     [foltia@foltia ~]$ mkdir /home/foltia/perl/tool/comskip/work
 
-. 本リポジトリに含まれるファイル一式を適当なディレクトリに置きます。(ここでは `/home/foltia/tmp/`)  
+3. 本リポジトリに含まれるファイル一式を適当なディレクトリに置きます。(ここでは `/home/foltia/tmp/`)  
 
-. `comskip.ini` ファイルを `/home/foltia/perl/tool/comskip/` に上書きコピーします。
+4. `comskip.ini` ファイルを `/home/foltia/perl/tool/comskip/` に上書きコピーします。
 
     [foltia@foltia tmp]$ cp comskip.ini /home/foltia/perl/tool/comskip/
 
-. `foltia_comskip.sh`, `foltia_comskip_byid_m2t.sh` を `/home/foltia/perl/tool/` におき、で実行権限をつけます。 
+5. `foltia_comskip.sh`, `foltia_comskip_byid_m2t.sh` を `/home/foltia/perl/tool/` におき、で実行権限をつけます。 
 
     [foltia@foltia tmp]$ cp foltia_comskip.sh foltia_comskip_byid_m2t.sh /home/foltia/perl/tool/
     [foltia@foltia tmp]$ chmod 755 /home/foltia/perl/tool/foltia_comskip*.sh
 
-. `ipodtranscode.pl` にパッチを当てます。
+6. `ipodtranscode.pl` にパッチを当てます。
 
     [foltia@foltia ~]$ cd /home/foltia/perl
     [foltia@foltia ~]$ cp ipodtranscode.pl ipodtranscode.pl.backup
@@ -60,22 +62,23 @@ foltia_comskip_byid_m2t.sh を、対象の動画のファイルIDを引数にし
 - ときどきCMスキップの解析にものすごく時間がかかる動画があります（１時間～２時間とか）
 
 ## プレイヤごとの対応状況
+
 * ×Windows Media Player
-** そもそもチャプタ情報を認識できてない
+  * そもそもチャプタ情報を認識できてない
 * ×GOM Player
-** チャプタ情報にマトモに対応してないらしい？
+  * チャプタ情報にマトモに対応してないらしい？
 * ○MPC-HC
-** PageDown/Up でさくさく移動
+  * PageDown/Up でさくさく移動
 * ○MPC-BE
-** PageDown/UPでさくさく移動
+  * PageDown/UPでさくさく移動
 * ○VLC
-** 画面下のボタンで移動
+  * 画面下のボタンで移動
 * △QuickTime
-** .mp4 を .m4v に拡張子を変えないとチャプタを認識しない
+  * .mp4 を .m4v に拡張子を変えないとチャプタを認識しない
 * △iPhone/iPad
-** .mp4 を .m4v に拡張子を変えないとチャプタを認識しない、Safari経由だとそれもダメ。PodCast経由でもダメ。
+  * .mp4 を .m4v に拡張子を変えないとチャプタを認識しない、Safari経由だとそれもダメ。PodCast経由でもダメ。
 * ○Apple  TV(iTunesのPodCast経由)
-** リモコンで　↓→　で移動可能
+  * リモコンで　↓→　で移動可能
 
 ## ライセンス
 
