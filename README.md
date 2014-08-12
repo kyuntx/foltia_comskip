@@ -60,22 +60,22 @@ foltia_comskip_byid_m2t.sh を、対象の動画のファイルIDを引数にし
 - ときどきCMスキップの解析にものすごく時間がかかる動画があります（１時間～２時間とか）
 
 ## プレイヤごとの対応状況
--×W Windows Media Player
---そもそもチャプタ情報を認識できてない
--×G GOM Player
---チャプタ情報にマトモに対応してないらしい？
--○MPC-HC
---PageDown/Up でさくさく移動
--○MPC-BE
---PageDown/UPでさくさく移動
--○VLC
---画面下のボタンで移動
--△QuickTime
---.mp4 を .m4v に拡張子を変えないとチャプタを認識しない
--△iPhone/iPad
---.mp4 を .m4v に拡張子を変えないとチャプタを認識しない、Safari経由だとそれもダメ。PodCast経由でもダメ。
--○Apple  TV(iTunesのPodCast経由)
---リモコンで　↓→　で移動可能
+* ×Windows Media Player
+** そもそもチャプタ情報を認識できてない
+* ×GOM Player
+** チャプタ情報にマトモに対応してないらしい？
+* ○MPC-HC
+** PageDown/Up でさくさく移動
+* ○MPC-BE
+** PageDown/UPでさくさく移動
+* ○VLC
+** 画面下のボタンで移動
+* △QuickTime
+** .mp4 を .m4v に拡張子を変えないとチャプタを認識しない
+* △iPhone/iPad
+** .mp4 を .m4v に拡張子を変えないとチャプタを認識しない、Safari経由だとそれもダメ。PodCast経由でもダメ。
+* ○Apple  TV(iTunesのPodCast経由)
+** リモコンで　↓→　で移動可能
 
 ## ライセンス
 

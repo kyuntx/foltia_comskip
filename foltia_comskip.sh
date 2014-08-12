@@ -1,7 +1,6 @@
 #!/bin/sh
 # foltia_comskip.sh
 #  Commercial detect and create chapters for HD Encoded MP4 files.
-#  ver. 0.09 / 201311240-09 Kazuki Takemura <kazuki@clovertown.jp>
 
 COMSKIP_PATH=/home/foltia/perl/tool/comskip
 COMSKIP_BIN=$COMSKIP_PATH/comskip.exe
