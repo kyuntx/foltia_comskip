@@ -1,0 +1,17 @@
+--- ipodtranscode.pl.orig	2014-05-13 14:24:23.000000000 +0900
++++ ipodtranscode.pl	2014-05-21 22:15:45.819055830 +0900
+@@ -571,7 +571,13 @@
+ 		}else{#補正不要
+ 			&writelog("ipodtranscode DEBUG HD Track calibration is not necessary FLAG:$globaltrackshiftflag $trcnmpegfile");
+ 		}#end if#補正値が必要か
+-		
++	
++		#Chapter作成
++		if (-e "$filenamebody.base.mp4"){
++			&writelog("ipodtranscode HD create chapter $inputmpeg2 $filenamebody.base.mp4 $recfolderpath");
++			system("$toolpath/perl/tool/foltia_comskip.sh $inputmpeg2 $filenamebody.base.mp4 $recfolderpath");
++		}
++	
+ 		#ファイル移動
+ 		if (-e "$filenamebody.base.mp4"){
+ 		unlink("${mp4outdir}MHD${mp4filenamestring}.MP4");
