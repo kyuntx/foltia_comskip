@@ -15,39 +15,51 @@ foltia ANIME LOCKER CMスキップ用チャプター追加パッチ
 
 1. [comskip](http://www.kaashoek.com/comskip/)のバイナリをダウンロードし、解凍したファイル一式を `/home/foltia/perl/tool/comskip/` に配置します。
 
-    [foltia@foltia ~]$ mkdir tmp
-    [foltia@foltia ~]$ cd tmp/
-    [foltia@foltia tmp]$ wget http://www.kaashoek.com/files/comskip81_064.zip
-    [foltia@foltia tmp]$ mkdir comskip
-    [foltia@foltia tmp]$ unzip comskip81_064.zip -d comskip/
-    [foltia@foltia tmp]$ mv comskip /home/foltia/perl/tool/
+```
+[foltia@foltia ~]$ mkdir tmp
+[foltia@foltia ~]$ cd tmp/
+[foltia@foltia tmp]$ wget http://www.kaashoek.com/files/comskip81_064.zip
+[foltia@foltia tmp]$ mkdir comskip
+[foltia@foltia tmp]$ unzip comskip81_064.zip -d comskip/
+[foltia@foltia tmp]$ mv comskip /home/foltia/perl/tool/
+```
 
 2. `/home/foltia/perl/tool/comskip/` に `work` というディレクトリを作成します。
 
-    [foltia@foltia ~]$ mkdir /home/foltia/perl/tool/comskip/work
+```
+[foltia@foltia ~]$ mkdir /home/foltia/perl/tool/comskip/work
+```
 
 3. 本リポジトリに含まれるファイル一式を適当なディレクトリに置きます。(ここでは `/home/foltia/tmp/`)  
 
 4. `comskip.ini` ファイルを `/home/foltia/perl/tool/comskip/` に上書きコピーします。
 
-    [foltia@foltia tmp]$ cp comskip.ini /home/foltia/perl/tool/comskip/
+```
+[foltia@foltia tmp]$ cp comskip.ini /home/foltia/perl/tool/comskip/
+```
 
 5. `foltia_comskip.sh`, `foltia_comskip_byid_m2t.sh` を `/home/foltia/perl/tool/` におき、で実行権限をつけます。 
 
-    [foltia@foltia tmp]$ cp foltia_comskip.sh foltia_comskip_byid_m2t.sh /home/foltia/perl/tool/
-    [foltia@foltia tmp]$ chmod 755 /home/foltia/perl/tool/foltia_comskip*.sh
+```
+[foltia@foltia tmp]$ cp foltia_comskip.sh foltia_comskip_byid_m2t.sh /home/foltia/perl/tool/
+[foltia@foltia tmp]$ chmod 755 /home/foltia/perl/tool/foltia_comskip*.sh
+```
 
 6. `ipodtranscode.pl` にパッチを当てます。
 
-    [foltia@foltia ~]$ cd /home/foltia/perl
-    [foltia@foltia ~]$ cp ipodtranscode.pl ipodtranscode.pl.backup
-    [foltia@foltia ~]$ patch -p0 < /home/foltia/tmp/ipodtranscode.pl.patch
+```
+[foltia@foltia ~]$ cd /home/foltia/perl
+[foltia@foltia ~]$ cp ipodtranscode.pl ipodtranscode.pl.backup
+[foltia@foltia ~]$ patch -p0 < /home/foltia/tmp/ipodtranscode.pl.patch
+```
 
 ### 既にエンコード済みの MP4 ファイルに手動でチャプタをつける
 
 foltia_comskip_byid_m2t.sh を、対象の動画のファイルIDを引数にして実行します。
 
-    /home/foltia/perl/tool/foltia_comskip_byid_m2t.sh 3424-6-20140811-0105-23
+```
+/home/foltia/perl/tool/foltia_comskip_byid_m2t.sh 3424-6-20140811-0105-23
+```
 
 - TSファイル(.m2t)と、HDエンコード済みのファイル(MHD*.MP4)の両方が存在している必要があります。
 - ファイルIDは Foltia の録画一覧の画面をみればわかると思います。MHDとかMAQとか拡張子とかをつけてはいけません。
