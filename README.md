@@ -1,5 +1,7 @@
 foltia_comskip
 ==============
+※本家 foltia ANIME LOCKER が 4.0 より公式でCMカット/スキップに対応したため、こちらの更新は停止します。
+==============
 
 foltia ANIME LOCKER CMスキップ用チャプター追加パッチ
 
